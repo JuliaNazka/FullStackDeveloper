@@ -171,5 +171,115 @@ avaliaParidade(10)
     • slice: retorna uma cópia do array
     • at(pos) ou [pos]: retorna elemento de posição especificada por pos
 
+    #### Array Bidimensional / Matriz 
+    * Bi, tridimensional - Matriz/Cubo 
+    * Inicialmente decladaro como vetor, mas ao definir os elementos declara um array - como se fosse um combo de linhas e columas 
+        * ![alt text](image-1.png)
+    
+    #### Tipos Derivados de Array 
+    * Pilha 
+        * ultimo dado a dar entrada é o primeiro a sair (LIFO) 
+        * push e pop
+        * precisa remodelar a estrutura quando é acomodado 
+            * tem um custo de hardware 
+    * Fila 
+        * Primeiro dado a dar entrada é o primeiro a sair (FIFO)
+        * push e shift 
+        * enqueue e dequeue - nomes diferentes para a mesma função de push e shift 
+    * entender as complexidades envolvidas em cada uma da soluções 
+    * Qual é o impacto para utilizar esse recurso e como eles funcionam na tecnologia 
+
+## SET 
+* Estrutura de dados simples 
+* Armazena os dados de forma contígua na memória 
+* Não permite que os dados armazenados estejam duplicados - conjunto único 
+    * Mesmo que adicione os dados de forma duplicada 
+* Não precisa armazenar só a mesma estrutura de dados - não precisa ser homogênio 
+    * Pode ser número, texto, conjuntos 
+* Usar o Set para remover valores duplicados de um array 
+    ![alt text](image-2.png)
 
 
+## Maps - Dicionários 
+* Simples como um Array 
+* Armazena os dados de forma contígua na memória - Estrutura é montada junta 
+* Armazena valores a partir do Par 
+    * Chaves + valor 
+    * Chaves não se repetem - determinamos o valor a partir da chave não pela posição
+    * Valores podem ser duplicados e aceitam qualquer tipo de dados, podem ser iguais 
+    * Usa o set para inserir um novo valor 
+    * ![alt text](image-3.png)
+
+# Listas encadeadas como estrutura de dados 
+## Estrutura encadeada 
+* Determinado numero de nodo, cada um com referência para o próximo 
+* Trabalha o conceito de referência - tem a estrutura e tem a referência de onde está a próxima estrutura, mesmo que as infos estejam espalhadas existe uma noção de referência 
+* Lista encadeadas = ligadas 
+
+### Nodo  
+* um nodo armazena uma informação e sabe onde está ou não o próximo nodo 
+* Possui : 
+    * Element - armazenamento de funções e estruturas - pode ser simples ou complexa dependendo do problema 
+    * Next - onde está o próximo
+* Class Node {
+    constructor (element) {
+        this.element = element;
+        this.next = null; 
+    }
+}
+
+* Pode colocar referências para o início ou final da fila 
+
+#### Lista Encadeada
+* Toda vez que tem que fazer uma manipulação , no início, meio e final, não tem que reajustar os valores em termo de meória, só remove o elemento e não precisa ajustar a memória 
+* Acesso direto ao primeiro elemento (header) é obrigatório
+* Acesso direto ao último elemento (tail) é desejável
+* O uso somente da referência header é ineficiente para inserção de elementos no final da lista
+
+##### Passo para inserir um novo elemento 
+01. Alocação de um novo nodo 
+02. Inserção das informações do nodo alocado 
+03. Inserção do nodo na lista com consequente encadeamento nos nodos já existentes
+
+*  Os seguintes métodos devem ser suportados:
+    * add(e): insere um elemento no final da lista
+    * add(index, e): insere um elemento em determinada posição (index) da lista
+    * get(index)/set(index, e): get/set o elemento na posição index
+    * remove(e): remove o elemento da lista
+    * isEmpty(): retorna true se a lista está vazia
+    * size(): retorna o número de elementos armazenados na lista
+    * contains(e): retorna true se a lista contém o elemento
+    * indexOf(e): retorna a posição onde o elemento está na lista
+    * clear(): remove todos os elementos da lista
+
+* https://github.com/loiane/javascript-datastructures-algorithms/blob/main/src/js/data-structures/linked-list.js
+
+# Árvores como estrutura de dados 
+* Estrutura de dados não linear 
+* Permitem a implementação de vários algoritmos mais rápidos do que no uso de estruturas de dados lineares como as listas
+* Estrutura de organização hierárquica 
+* O número de elemento que eu referêncio para baixo da árvore é uma decisão e eles serão filhos 
+* Não pode existir mais de um PAI 
+* Dois nodos que são filhos de um mesmo pai são irmãos
+* Um nodo v é externo se v não tem filhos - folha
+* Um nodo v é interno se tem um ou mais filhos - galho 
+
+
+# Recursão 
+* "Para entender a recursão, é preciso entender antes a recursão.”
+* Chamar uma função para resolver um problema e dentro de cada chamada pode chamar a mesma função para resolver o problema
+* Loop infinito - filme inception 
+* Metodo para resolver um problema, finaliza quando o problema original foi resolvido 
+* Um método ou função será recursivo se ele puder chamar a si mesmo diretamente
+* Exemplo para resolver fatorial
+
+## Árvore 
+* oportunidade de navegação atravéz da recurção 
+* A Raiz da árvore é chamada de pai das subárvores 
+*  As raízes das sub-árvores de um nodo são chamadas de irmãos, que, por sua vez, são filhos de seu nodo pai
+
+
+
+
+
+    
