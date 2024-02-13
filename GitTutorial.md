@@ -6,7 +6,7 @@ git add .
 
 Git commit -m "descrição aqui"
 
-git push -u origin DesenvolvimentoJulia
+git push -u main
 
 git status
 
