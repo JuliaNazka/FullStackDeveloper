@@ -265,7 +265,7 @@ avaliaParidade(10)
 * Um nodo v é interno se tem um ou mais filhos - galho 
 
 
-# Recursão 
+## Recursão 
 * "Para entender a recursão, é preciso entender antes a recursão.”
 * Chamar uma função para resolver um problema e dentro de cada chamada pode chamar a mesma função para resolver o problema
 * Loop infinito - filme inception 
@@ -278,8 +278,135 @@ avaliaParidade(10)
 * A Raiz da árvore é chamada de pai das subárvores 
 *  As raízes das sub-árvores de um nodo são chamadas de irmãos, que, por sua vez, são filhos de seu nodo pai
 
-
-
-
-
+* Grau 
+    * Numero de sub-árvores de um nodo 
+    * Quantos elemento eu aponto a partir de um nó 
+    * Quantos filhos tem 
+* Nível de nodo 
+    * Qual camada da árvore se encontra
+    * COnta a partir do 0 
+* Altura 
+    * QUantos níveis compoe a estrutura 
     
+### Métodos Esperados 
+* root(): retorna a raiz da árvore; 
+* parent(v): retorna o nodo pai de v, ocorrendo um erro se for a raiz; 
+* children(v): retorna os filhos do nodo v;
+* isInternal(v): testa se um nodo v é interno e retorna true ou false; 
+* isExternal(v): testa se um nodo v é externo e retorna true ou false;
+* isRoot(v): testa se um nodo v é raiz e retorna true ou false;
+* size(): retorna o número de nodos na árvore; 
+* isEmpty(): testa se a árvore tem ou não tem algum nodo;
+* positions(): retorna uma coleção com todos os nodos da árvore; 
+* replaceElement(v,e): retorna o elemento armazenado em v e o substitui 
+por e; 
+
+### Representação em memória 
+* Estrutura em array pra representar uma árvore - não faz sentido mas funciona 
+
+### Árvore binária 
+* Limitar o números de elementos que compoe os filhos 
+* Todos os nodos tem no máximo 2 filhos 
+* Cada nodo filho é nodo da esquerda ou da direita 
+* O filho da esquerda precede o da direita na organização e ordenação dos nodos 
+* Ou o nodo tem 2 filhos ou só nenhum 
+![alt text](image-4.png)
+
+![alt text](image-5.png)
+
+Cada nodo contém 
+* a informação 
+* uma referência para o pai 
+* uma referencia para a subárvore da esquerda
+* uma referencia para a subárvore da direita
+A estrutura de árvores armazena 
+* referencia para a raiz 
+* numero de elementos ja inserido 
+    
+
+Navegação pelo conteúdo 
+* Percurso em profundidade 
+    * Pré-fixado - começa pela raíz
+        * Nodo é visitado antes dos descendentes 
+        01. Raiz 
+        02. Esquerda
+        01. Direita
+
+    * Pós fixado 
+        * Nodo é visitado antes dos descendentes 
+        01. Esquerda
+        02. Direita 
+        03. Raíz 
+    
+    * Central 
+        * Direita para esquerda 
+        01. Direita
+        02. Centro 
+        03. Esquerda 
+        ![alt text](image-6.png)
+
+* Percurso em largura 
+    * Navega em níveis 
+    01. primeiro nível 
+    02. segundo nível 
+    03. em diante 
+
+# Técnicas e Projeto de algorítmos 
+• https://github.com/loiane/javascript-datastructures-algorithms/tree/main/src/js/algorithms
+
+## Tipos
+* Divisão e conquista 
+    * Quebra o produto em menores para que o menor de todos seja muito fácil de ser resolvido 
+    * Entrega o resultado a partir das conquistas 
+* Programação dinâmica 
+    * Quebra o problema em menores, mas independente - ex: fibinacci 
+    * Não precisa da solução combinada para ter a final 
+* Greedy 
+    * Considera os refinamentos e melhoramentos locais em cada pontos 
+    * especialização em um único ponto 
+* Backtracking 
+    * Busca a solução e refinamento 
+    * Quando não faz sentido mais o melhoramento ele retorna e busca em outro ponto 
+
+## Motivação 
+* A presensa de dados desordenados impactará no desempenho da solução 
+### Algorítmos de ordenamento 
+* Bubble sort 
+    * compara dois elementos por vez, passando por todo vetor n^2 vezes
+    * Para cada elemento ele percorre todos os outros elementos 
+    * Funciona, mas é lento 
+* Selection sort 
+    * Restringe o número de trocas realizadas ao longo da ordenação 
+    * Antes de fazer a troca define com quem vai trocar 
+* Insertion sorte 
+    * Abre espaço no ponto para inserção, restringindo a área de comparação 
+* Merge sort 
+    * Diferente das sequencial ecplora a recursividade
+    * quebra a estrutura e resolve a ordenação em pequenos problemas
+    * Divisão e conquista 
+    * Ao final está tudo reordenado 
+* Quick sort 
+    * Sorteio de um pivô - quem é maior vai para um lado e quem é menor vai para o outro 
+
+* Comparação entre as ordenações 
+https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html
+https://www.toptal.com/developers/sorting-algorithms
+
+### Algorítmo de busca 
+* Busca linear/ sequencial 
+    * Investiga cada posição da estrutura de dados 
+    * tem um custo muito maior 
+    * boa se tiver com a lista completamente desordenada 
+* Busca binária 
+    * Precisa que a estrutura esteja ordenada 
+    * Sorteia uma posição - vai fazendo saltos na posição patra chegar ao resultado final mais rápido 
+
+
+• Use as referências bibliográficas
+*  GRONER, Loiane. Learning JavaScript Data Structures and Algorithms. Third Edition. Birminghan: Packt, 2018.
+*  CORMEN, Thomas H.; et al. Algoritmos: teoria e prática. Terceira Edição. Rio de Janeiro : Elsevier, 2012.*
+*  PIVA JR, Dilermando et al. Estrutura de dados e técnicas de programação. 2a. Edição. Rio de Janeiro: 
+Elsevier, 2019.
+
+
+Função
