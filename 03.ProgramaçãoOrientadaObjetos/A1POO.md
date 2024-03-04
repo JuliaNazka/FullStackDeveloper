@@ -2,7 +2,7 @@
  Prof Alessandro Dias 
 
 ## Introdução 
-* A programação orientada a Objetos é um **paradgma de programação**
+* A programação orientada a Objetos é um **paradigma de programação**
     * Foco em **objetos** em vez de funções 
     * Objetos -> São uma estrutura mais complexas que funções 
 * Não é uma linguagem de programação nem uma ferramenta ou framwork(conjunto de classes de uma linguagem) 
@@ -16,13 +16,13 @@
         * **JavaScript**
         * Python 
         * Ruby 
-    * Conhecer paradgmas é **Essencial** para qualquer desenvolvedor de software 
+    * Conhecer paradigmas é **Essencial** para qualquer desenvolvedor de software 
 
 ## Contextualização 
 * Programação estruturada 
     * Criada em 1940 
     * Por muito tempo só existia esse método 
-    * Paradgma com foco em 
+    * Paradigma com foco em 
         * Sequência (como ensinar o computador a fazer o que queremos) - uma instrução é executada após a outra
         * Decisão (tomar caminhos diferentes dentro do mesmo programa) - uma instrução executada após um teste lógico 
         * Iteração (repetir) - um trecho de código pode repetir após algum teste lógico 
@@ -31,7 +31,7 @@
 
 * Programação procedural 
     * Pegou alguns conceitos da estruturada e tentou facilitar 
-    *  Paradgma com foco no uso de procedimentos e funções para **facilitar o reuso**
+    *  Paradigma com foco no uso de procedimentos e funções para **facilitar o reuso**
     * Não deve ter mais que 10 linhas 
     * Estruturas da programação estruturadas e **quebrar trechos de códigos em funções**
     * O programa sabe o que a função faz e pode chamá-la quando precisar 
@@ -54,7 +54,7 @@
 *Ler a documentação do JS, StackOverflow*
 
 ## Programação Orientada a Objeto 
-* Paradgma com foco no uso de objetos, onde cada um contém suas variáveis e funções 
+* Paradigma com foco no uso de objetos, onde cada um contém suas variáveis e funções 
 * Construída em cima da programação estruturada e procedural 
     * Objeto A ( função dele (Conjunto de dados dele))
     * Objeto B ( função dele (Conjunto de dados dele))
@@ -66,15 +66,29 @@
 
 * Componentes 
     * Diagrama de objetos - UML 
-        * Nome (Dispositivo) - Diferenciar os objetidos 
+        * Nome (Dispositivo) - Diferenciar os objetivos 
         * Atributos (Fabricante, modelo) - informações, dados do objetos - representam o estado do objeto (o que é e o que representa)
         * Métodos ( Comportamentos, ligar, diminuirVolume) - ação (o que o objeto pode fazer)
 
 ## Objeto 
-* Tem atributos, metodo e nome 
+* Tem atributos, método e nome 
 * Coleção de dados e funcionalidades que tem alguma relação entre si 
     * Dados -> variáveis (Atributos ou propriedades) -> Na Orientação a objetos tudo isso é a mesma coisa
     * Funcionalidades -> Funções (métodos, comportamentos)
 * No **Java Script** atributos e métodos são membros de um objeto, cada um com um nome e um valor 
 * Em JS Até o objeto vazio possui algo dentro dele 
-* Um objeto em Js é composto por membros e valores 
+* Um objeto em Js é composto por membros que tem **nome e valores** 
+* Em Js tudo eventualmente vira um objeto 
+* Em JavaScript, atributos e métodos são membros de um objeto, cada um com um nome e um valor
+    * var nomeDoObjeto = {
+        nomeMembro1: valorMembro1,
+        nomeMembro2: valorMembro2,
+        nomeMembro3: valorMembro3,
+    };
+    * var pessoa = {
+        nome: "Valentina", 
+        idade: 60,
+        saudar: function() {
+            console.log("Olá")
+        }
+    }
